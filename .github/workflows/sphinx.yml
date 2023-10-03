@@ -9,9 +9,13 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11.4'
+        cache: 'pip'
     - name: Build HTML
       with:
-        pre-build-command: "pip install --upgrade pip"
+        pre-build-command: "apt install -y pandoc"
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
