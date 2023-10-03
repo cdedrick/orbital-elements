@@ -14,6 +14,7 @@ jobs:
         python-version: '3.11.4' 
     - name: Build HTML
       with:
+        python-version: '3.11.4'
         pre-build-command: "apt install -y pandoc"
       uses: ammaraskar/sphinx-action@master
     - name: Upload artifacts
