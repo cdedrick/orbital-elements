@@ -14,7 +14,19 @@ author = 'C. Dedrick'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'nbsphinx'
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages',
+    'sphinx_markdown_builder',
+    'sphinx_rtd_theme',
+    'myst_parser',
+    'nbsphinx',
+    'nbsphinx_link'
 ]
 
 templates_path = ['_templates']
