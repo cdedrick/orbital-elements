@@ -13,6 +13,7 @@ jobs:
       with:
         python-version: '3.11.4' 
         cache: 'pip'
+        cache-dependency-path: '**/requirements-dev.txt'
     - name: Build HTML
       with:
         pre-build-command: "apt install -y pandoc"
