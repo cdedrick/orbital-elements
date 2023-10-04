@@ -9,8 +9,9 @@ Welcome to OrbitViz's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
 
-   test
+   ../test
 
 Indices and tables
 ==================
