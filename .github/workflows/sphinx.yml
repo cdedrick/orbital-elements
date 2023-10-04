@@ -20,8 +20,7 @@ jobs:
         pip install -r requirements.txt
     - name: Build HTML
       run: |
-        apt-get update -y
-        apt-get install -y --no-install-recommends pandoc
+        apt install -y pandoc
         python -m sphinx source build
         make html -e
       working-directory: ./docs
