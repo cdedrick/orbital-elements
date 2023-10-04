@@ -11,7 +11,7 @@ Welcome to OrbitViz's documentation!
    :caption: Contents:
    :glob:
 
-   test
+   ../test
 
 Indices and tables
 ==================
