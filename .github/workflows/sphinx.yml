@@ -5,6 +5,9 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
     permissions:
       contents: write
     steps:
@@ -14,9 +17,9 @@ jobs:
         python-version: '3.11.4'
         cache: 'pip'
     - name: Build HTML
-      with:
-        pre-build-command: '/usr/local/bin/python -m pip install --upgrade pip'
       uses: ammaraskar/sphinx-action@master
+      with:
+        pre-build-command: 'python -m pip install **/requirements.txt'
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
