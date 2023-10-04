@@ -1,9 +1,6 @@
 name: "Sphinx: Render docs"
 
-on:
-  push:
-
-  workflow-dispatch:
+on: [push, workflow-dispatch]
 
 jobs:
   build:
